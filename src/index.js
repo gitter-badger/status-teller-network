@@ -6,6 +6,9 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './js/i18n';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import LogRocket from 'logrocket';
+LogRocket.init('lqnuu9/teller-network');
+
 import './css/fonts/Inter/inter.css';
 import './css/bootstrap-overrides.scss';
 import './index.scss';
