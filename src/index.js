@@ -7,7 +7,6 @@ import i18n from './js/i18n';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import LogRocket from 'logrocket';
-LogRocket.init('lqnuu9/teller-network');
 
 import './css/fonts/Inter/inter.css';
 import './css/bootstrap-overrides.scss';
@@ -17,6 +16,8 @@ import './css/Form.scss';
 import App from './js/layout/App';
 import history from './js/history';
 import {store, persistor} from './js/store';
+
+LogRocket.init('lqnuu9/teller-network');
 
 ReactDOM.render(
   <Provider store={store}>
