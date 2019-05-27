@@ -486,8 +486,7 @@
       ],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "constructor",
-      "signature": "constructor"
+      "type": "constructor"
     },
     {
       "anonymous": false,
@@ -601,8 +600,7 @@
   "filename": "/Users/iurimatias/Projects/Status/status-teller-network/.embark/contracts/teller-network/Arbitration.sol",
   "originalFilename": "contracts/teller-network/Arbitration.sol",
   "path": "/Users/iurimatias/Projects/Status/status-teller-network/contracts/teller-network/Arbitration.sol",
-  "gas": 1750485,
-  "gasPrice": "1000000000",
+  "gas": "auto",
   "type": "file",
   "deploy": true,
   "_gasLimit": 6000000,
@@ -612,6 +610,6 @@
     "0x983282f4D0d8be5E1531705FeF9610ce118Cc2FD",
     "10000000000000000000"
   ],
-  "deployedAddress": "0x0865125010cF7FE26eac7505494ce5857dA21637",
-  "transactionHash": "0x6d7106bd45cf7606892a8c39a398940603652123861c1e5d114464361946baca"
+  "address": "0x0865125010cF7FE26eac7505494ce5857dA21637",
+  "deployedAddress": "0x0865125010cF7FE26eac7505494ce5857dA21637"
 }
