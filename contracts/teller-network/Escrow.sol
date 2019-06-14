@@ -68,10 +68,9 @@ contract Escrow is Pausable, MessageSigned, Fees, Arbitrable {
     event Canceled(uint indexed escrowId, uint date);
     event Rating(uint indexed offerId, address indexed buyer, uint indexed escrowId, uint rating, uint date);
 
-
     /**
      * @notice Create a new escrow
-     * @param _buyer Buyer address
+     * @param _signature buyer's signature
      * @param _offerId Offer
      * @param _tradeAmount Amount buyer is willing to trade
      * @param _tradeType Indicates if the amount is in crypto or fiat
@@ -83,7 +82,7 @@ contract Escrow is Pausable, MessageSigned, Fees, Arbitrable {
      *         The seller needs to be licensed.
      */
     function create(
-        address payable _buyer,
+        bytes memory _signature,   
         uint _offerId,
         uint _tradeAmount,
         uint8 _tradeType,
@@ -92,8 +91,8 @@ contract Escrow is Pausable, MessageSigned, Fees, Arbitrable {
         string memory _location,
         string memory _username
     ) public whenNotPaused returns(uint escrowId) {
+        address payable _buyer = metadataStore.addOrUpdateUser(_signature, _statusContactCode, _location, _username);
         escrowId = createTransaction(_buyer, _offerId, _tradeAmount, _tradeType, _assetPrice);
-        metadataStore.addOrUpdateUser(_buyer, _statusContactCode, _location, _username);
     }
 
     /**
