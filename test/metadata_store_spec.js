@@ -51,7 +51,7 @@ contract("MetadataStore", function () {
   before(async () => {
     await SNT.methods.generateTokens(accounts[0], 1000).send();
 
-    hash = await MetadataStore.methods.getDataHash("Iuri", SellerLicense.address, "London").call();
+    hash = await MetadataStore.methods.getDataHash("Iuri", SellerLicense.address).call();
     signature = await web3.eth.sign(hash, accounts[0]);
 
   });
